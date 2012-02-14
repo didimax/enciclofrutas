@@ -1,4 +1,6 @@
 Enciclofrutas::Application.routes.draw do
+  resources :moderadors
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

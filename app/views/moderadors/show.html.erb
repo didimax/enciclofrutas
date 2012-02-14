@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @moderador.nome %>
+</p>
+
+<p>
+  <b>Sobrenome:</b>
+  <%= @moderador.sobrenome %>
+</p>
+
+<p>
+  <b>Senha:</b>
+  <%= @moderador.senha %>
+</p>
+
+<p>
+  <b>Pais:</b>
+  <%= @moderador.pais %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @moderador.cidade %>
+</p>
+
+<p>
+  <b>Genero:</b>
+  <%= @moderador.genero %>
+</p>
+
+<p>
+  <b>Data_Nasc:</b>
+  <%= @moderador.data_nasc %>
+</p>
+
+<p>
+  <b>CPF:</b>
+  <%= @moderador.cpf %>
+</p>
+
+<p>
+  <b>RG:</b>
+  <%= @moderador.rg %>
+</p>
+
+<p>
+  <b>e-mail:</b>
+  <%= @moderador.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_moderador_path(@moderador) %> |
+<%= link_to 'Back', moderadors_path %>
