@@ -67,7 +67,14 @@ feature 'gerenciar moderador' do
     
   end
 
-  
+  scenario 'excluir moderador' do #, :javascript => true do
+    moderador = FactoryGirl.create(:moderador)
+    visit moderadors_path
+
+    click_link 'Excluir'
+    
+    Moderador.count.should == 0
+  end
  
 end
 
