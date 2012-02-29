@@ -71,5 +71,15 @@ feature 'gerenciar fruta' do
     page.should have_content 'Nome: Diego'
 
 end
+
+    scenario 'Excluir fruta' do #, :javascript => true do
+
+    moderador = FactoryGirl.create(:moderador,:nome => 'Diego') 
+    fruta = FactoryGirl.create(:fruta, :moderador => moderador)
+
+    visit frutas_path
+    click_link 'Excluir'
+
+  end
  
 end
