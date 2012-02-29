@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @vitamina.nome %>
+</p>
+
+<p>
+  <b>Beneficio:</b>
+  <%= @vitamina.beneficio %>
+</p>
+
+
+<%= link_to 'Edit', edit_vitamina_path(@vitamina) %> |
+<%= link_to 'Back', vitaminas_path %>
