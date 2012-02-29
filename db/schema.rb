@@ -11,7 +11,39 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214131325) do
+ActiveRecord::Schema.define(:version => 20120229122832) do
+
+  create_table "fruta", :force => true do |t|
+    t.string   "nome"
+    t.string   "nome_cientifico"
+    t.string   "peso"
+    t.string   "cor"
+    t.string   "preco"
+    t.string   "localizacao"
+    t.string   "calorias"
+    t.string   "informacao"
+    t.integer  "moderador_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "fruta", ["moderador_id"], :name => "index_fruta_on_moderador_id"
+
+  create_table "frutas", :force => true do |t|
+    t.string   "nome"
+    t.string   "nome_cientifico"
+    t.string   "peso"
+    t.string   "cor"
+    t.string   "preco"
+    t.string   "localizacao"
+    t.string   "calorias"
+    t.string   "informacao"
+    t.integer  "moderador_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "frutas", ["moderador_id"], :name => "index_frutas_on_moderador_id"
 
   create_table "moderadors", :force => true do |t|
     t.string   "nome"

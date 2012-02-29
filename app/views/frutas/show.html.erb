@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @fruta.nome %>
+</p>
+
+<p>
+  <b>Nome_Cientifico:</b>
+  <%= @fruta.nome_cientifico %>
+</p>
+
+<p>
+  <b>Peso:</b>
+  <%= @fruta.peso %>
+</p>
+
+<p>
+  <b>Cor:</b>
+  <%= @fruta.cor %>
+</p>
+
+<p>
+  <b>Preço:</b>
+  <%= @fruta.preco %>
+</p>
+
+<p>
+  <b>Localização:</b>
+  <%= @fruta.localizacao %>
+</p>
+
+<p>
+  <b>Calorias:</b>
+  <%= @fruta.calorias %>
+</p>
+
+<p>
+  <b>Informação:</b>
+  <%= @fruta.informacao %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @fruta.moderador.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_fruta_path(@fruta) %> |
+<%= link_to 'Back', frutas_path %>

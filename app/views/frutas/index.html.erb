@@ -1,0 +1,39 @@
+<h1>Listing frutas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Nome cientifico</th>
+    <th>Peso</th>
+    <th>Cor</th>
+    <th>Preco</th>
+    <th>Localizacao</th>
+    <th>Calorias</th>
+    <th>Informacao</th>
+    <th>Moderador</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @frutas.each do |fruta| %>
+  <tr>
+    <td><%= fruta.nome %></td>
+    <td><%= fruta.nome_cientifico %></td>
+    <td><%= fruta.peso %></td>
+    <td><%= fruta.cor %></td>
+    <td><%= fruta.preco %></td>
+    <td><%= fruta.localizacao %></td>
+    <td><%= fruta.calorias %></td>
+    <td><%= fruta.informacao %></td>
+    <td><%= fruta.moderador %></td>
+    <td><%= link_to 'Show', fruta %></td>
+    <td><%= link_to 'Edit', edit_fruta_path(fruta) %></td>
+    <td><%= link_to 'Destroy', fruta, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fruta', new_fruta_path %>
