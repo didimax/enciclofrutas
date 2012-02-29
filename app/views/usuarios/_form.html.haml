@@ -1,0 +1,9 @@
+= semantic_form_for(@usuario) do |f|
+ = f.input :nome, :label => 'Nome'
+ = f.input :sobrenome, :label => 'Sobrenome'
+ = f.input :genero, :label => 'Genero'
+ = f.input :data_nasc, :label => 'Data_Nasc'
+ = f.input :email, :label => 'email'
+ = f.input :senha, :label => 'Senha'
+
+ = f.submit 'Salvar'

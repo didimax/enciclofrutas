@@ -1,4 +1,6 @@
 Enciclofrutas::Application.routes.draw do
+  resources :usuarios
+
   resources :frutas
 
   resources :moderadors

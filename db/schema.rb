@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120229122832) do
+ActiveRecord::Schema.define(:version => 20120229133957) do
 
   create_table "fruta", :force => true do |t|
     t.string   "nome"
@@ -55,6 +55,17 @@ ActiveRecord::Schema.define(:version => 20120229122832) do
     t.string   "data_nasc"
     t.string   "cpf"
     t.string   "rg"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usuarios", :force => true do |t|
+    t.string   "nome"
+    t.string   "sobrenome"
+    t.string   "data_nasc"
+    t.string   "genero"
+    t.string   "senha"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
