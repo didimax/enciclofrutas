@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @mercado.nome %>
+</p>
+
+<p>
+  <b>Endereço:</b>
+  <%= @mercado.endereco %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @mercado.telefone %>
+</p>
+
+
+<%= link_to 'Edit', edit_mercado_path(@mercado) %> |
+<%= link_to 'Back', mercados_path %>

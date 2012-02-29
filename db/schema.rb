@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120229144042) do
+ActiveRecord::Schema.define(:version => 20120229150051) do
 
   create_table "epocas", :force => true do |t|
     t.string   "estacao_do_ano"
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(:version => 20120229144042) do
   end
 
   add_index "frutas", ["moderador_id"], :name => "index_frutas_on_moderador_id"
+
+  create_table "mercados", :force => true do |t|
+    t.string   "nome"
+    t.string   "endereco"
+    t.string   "telefone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "moderadors", :force => true do |t|
     t.string   "nome"

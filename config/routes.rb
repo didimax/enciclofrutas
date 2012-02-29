@@ -1,4 +1,6 @@
 Enciclofrutas::Application.routes.draw do
+  resources :mercados
+
   resources :epocas
 
   resources :vitaminas

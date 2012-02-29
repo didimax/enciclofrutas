@@ -6,7 +6,7 @@ feature 'gerenciar epoca' do
   before :each do
   end
   
-  scenario 'incluir epoca' do
+    scenario 'incluir epoca' do
     visit new_epoca_path
     
     fill_in 'Estação do ano', :with => 'outono/inverno'
