@@ -67,7 +67,7 @@ feature 'gerenciar moderador' do
     
   end
 
-  scenario 'excluir moderador' do #, :javascript => true do
+    scenario 'excluir moderador' do #, :javascript => true do
     moderador = FactoryGirl.create(:moderador)
     visit moderadors_path
 

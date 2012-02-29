@@ -56,7 +56,7 @@ feature 'gerenciar usuario' do
 
     click_link 'Excluir'
     
-    Moderador.count.should == 0
+    Usuario.count.should == 0
   end
  
 

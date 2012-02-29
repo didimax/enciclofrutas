@@ -35,4 +35,14 @@ end
     page.should have_content 'Beneficio: Contra virus griparius'
 
 end
+
+    scenario 'excluir vitamina' do #, :javascript => true do
+    vitamina = FactoryGirl.create(:vitamina)
+    visit vitaminas_path
+
+    click_link 'Excluir'
+    
+    Vitamina.count.should == 0
+  end
+
   end
