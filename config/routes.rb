@@ -1,4 +1,6 @@
 Enciclofrutas::Application.routes.draw do
+  resources :epocas
+
   resources :vitaminas
 
   resources :usuarios

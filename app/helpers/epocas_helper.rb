@@ -1,0 +1,2 @@
+module EpocasHelper
+end

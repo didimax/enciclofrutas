@@ -1,0 +1,23 @@
+<h1>Listing epocas</h1>
+
+<table>
+  <tr>
+    <th>Estacao do ano</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @epocas.each do |epoca| %>
+  <tr>
+    <td><%= epoca.estacao_do_ano %></td>
+    <td><%= link_to 'Show', epoca %></td>
+    <td><%= link_to 'Edit', edit_epoca_path(epoca) %></td>
+    <td><%= link_to 'Destroy', epoca, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Epoca', new_epoca_path %>
