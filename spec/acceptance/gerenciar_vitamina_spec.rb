@@ -20,4 +20,19 @@ feature 'gerenciar vitamina' do
     
 end
 
+
+    scenario 'alterar vitamina' do #, :javascript => true do
+    vitamina = FactoryGirl.create(:vitamina)
+    visit edit_vitamina_path(vitamina)
+    
+    fill_in 'Nome', :with => 'C'
+    fill_in 'Beneficio', :with => 'Contra virus griparius'
+    
+        
+    click_button 'Salvar'
+   
+    page.should have_content 'Nome: C'
+    page.should have_content 'Beneficio: Contra virus griparius'
+
+end
   end
