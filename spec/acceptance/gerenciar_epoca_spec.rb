@@ -30,4 +30,15 @@ end
 end
 
 
+    scenario 'excluir epoca' do #, :javascript => true do
+    epoca = FactoryGirl.create(:epoca)
+    visit epocas_path
+
+    click_link 'Excluir'
+    
+    Epoca.count.should == 0
+  end
+
+
+
 end
