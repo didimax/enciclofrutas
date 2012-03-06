@@ -11,29 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120229150051) do
+ActiveRecord::Schema.define(:version => 20120229160435) do
 
   create_table "epocas", :force => true do |t|
     t.string   "estacao_do_ano"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "fruta", :force => true do |t|
-    t.string   "nome"
-    t.string   "nome_cientifico"
-    t.string   "peso"
-    t.string   "cor"
-    t.string   "preco"
-    t.string   "localizacao"
-    t.string   "calorias"
-    t.string   "informacao"
-    t.integer  "moderador_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "fruta", ["moderador_id"], :name => "index_fruta_on_moderador_id"
 
   create_table "frutas", :force => true do |t|
     t.string   "nome"
@@ -45,10 +29,12 @@ ActiveRecord::Schema.define(:version => 20120229150051) do
     t.string   "calorias"
     t.string   "informacao"
     t.integer  "moderador_id"
+    t.integer  "epoca_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "frutas", ["epoca_id"], :name => "index_frutas_on_epoca_id"
   add_index "frutas", ["moderador_id"], :name => "index_frutas_on_moderador_id"
 
   create_table "mercados", :force => true do |t|

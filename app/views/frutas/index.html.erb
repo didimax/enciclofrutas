@@ -10,7 +10,8 @@
     <th>Localizacao</th>
     <th>Calorias</th>
     <th>Informacao</th>
-    <th>Moderador</th>
+    <th>Nome</th>
+    <th>Estação do Ano</th> 
     <th></th>
     <th></th>
     <th></th>
@@ -26,7 +27,8 @@
     <td><%= fruta.localizacao %></td>
     <td><%= fruta.calorias %></td>
     <td><%= fruta.informacao %></td>
-    <td><%= fruta.moderador %></td>
+    <td><%= fruta.moderador.nome %></td>
+   <td><%= fruta.epoca.id %></td>
     <td><%= link_to 'Show', fruta %></td>
     <td><%= link_to 'Edit', edit_fruta_path(fruta) %></td>
     <td><%= link_to 'Excluir', fruta, confirm: 'Are you sure?', method: :delete %></td>

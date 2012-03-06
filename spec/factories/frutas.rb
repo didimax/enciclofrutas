@@ -11,5 +11,6 @@ FactoryGirl.define do
     calorias "MyString"
     informacao "MyString"
     moderador nil
+    epoca nil
   end
 end

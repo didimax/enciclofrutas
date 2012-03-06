@@ -1,12 +1,15 @@
 = semantic_form_for(@fruta) do |f|
- = f.input :nome, :label => 'Nome'
- = f.input :nome_cientifico, :label => 'Nome_Cientifico'
- = f.input :peso, :label => 'Peso'
- = f.input :cor, :label => 'Cor'
- = f.input :preco, :label => 'Preço'
- = f.input :localizacao, :label => 'Localização'
- = f.input :calorias, :label => 'Calorias'
- = f.input :informacao, :label => 'Informação'
- = f.input :moderador, :member_label => :nome, :label => 'Nome'
- 
- = f.submit 'Salvar'
+  = f.input :nome, :label => 'Nome'
+  = f.input :nome_cientifico, :label => 'Nome_Cientifico'
+  = f.input :peso, :label => 'Peso'
+  = f.input :cor, :label => 'Cor'
+  = f.input :preco, :label => 'Preço'
+  = f.input :localizacao, :label => 'Localização'
+  = f.input :calorias, :label => 'Calorias'
+  = f.input :informacao, :label => 'Informação'
+  = f.input :moderador, :member_label => :nome, :label => 'Nome'
+  = f.input :epoca, :member_label => :estacao_do_ano, :label => 'Estação do ano'
+  
+  = f.submit 'Salvar'
+
+

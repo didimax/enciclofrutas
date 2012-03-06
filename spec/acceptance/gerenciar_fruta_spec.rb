@@ -1,4 +1,4 @@
-# coding: utf-8
+ # coding: utf-8
 
 require 'spec_helper'
 
@@ -9,6 +9,8 @@ feature 'gerenciar fruta' do
   scenario 'incluir fruta' do
 
     moderador = FactoryGirl.create(:moderador,:nome => 'Diego') 
+    epoca = FactoryGirl.create(:epoca,:estacao_do_ano => 'outono')
+     
     visit new_fruta_path
    
      
@@ -21,7 +23,10 @@ feature 'gerenciar fruta' do
     fill_in 'Localização', :with => 'Região Sul'
     fill_in 'Calorias', :with => '45'
     fill_in 'Informação', :with => 'Morango é a fruta mais cara na Asia'    
-    select 'Diego', :on => 'Nome'
+    
+    select  'Diego', :on => 'Nome'
+    select  'outono', :on => 'Estação do ano'
+    
        
     click_button 'Salvar'
   
@@ -35,6 +40,8 @@ feature 'gerenciar fruta' do
     page.should have_content 'Calorias: 45'
     page.should have_content 'Informação: Morango é a fruta mais cara na Asia'
     page.should have_content 'Nome: Diego'
+    page.should have_content 'Estação do Ano: outono'
+
 
   end
 
@@ -42,7 +49,8 @@ feature 'gerenciar fruta' do
     scenario 'alterar fruta' do #, :javascript => true do
 
     moderador = FactoryGirl.create(:moderador,:nome => 'Diego') 
-    fruta = FactoryGirl.create(:fruta, :moderador => moderador)
+    epoca = FactoryGirl.create(:epoca,:estacao_do_ano => 'outono')
+    fruta = FactoryGirl.create(:fruta)
 
     visit edit_fruta_path(fruta)
 
@@ -55,7 +63,9 @@ feature 'gerenciar fruta' do
     fill_in 'Localização', :with => 'Região Sul'
     fill_in 'Calorias', :with => '45'
     fill_in 'Informação', :with => 'Morango é a fruta mais cara na Asia'    
-    select 'Diego', :on => 'Nome'
+   
+    select  'Diego', :on => 'Nome'
+    select  'outono', :on => 'Estação do ano'
        
     click_button 'Salvar'
   
@@ -69,13 +79,15 @@ feature 'gerenciar fruta' do
     page.should have_content 'Calorias: 45'
     page.should have_content 'Informação: Morango é a fruta mais cara na Asia'
     page.should have_content 'Nome: Diego'
+    page.should have_content 'Estação do Ano: outono'
 
 end
 
     scenario 'Excluir fruta' do #, :javascript => true do
 
     moderador = FactoryGirl.create(:moderador,:nome => 'Diego') 
-    fruta = FactoryGirl.create(:fruta, :moderador => moderador)
+    epoca = FactoryGirl.create(:epoca,:estacao_do_ano => 'outono')
+    fruta = FactoryGirl.create(:fruta, :moderador => moderador, :epoca => epoca)
 
     visit frutas_path
     click_link 'Excluir'

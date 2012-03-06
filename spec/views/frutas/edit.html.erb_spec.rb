@@ -11,7 +11,8 @@ describe "frutas/edit" do
       :localizacao => "MyString",
       :calorias => "MyString",
       :informacao => "MyString",
-      :moderador => nil
+      :moderador => nil,
+      :epoca => nil
     ))
   end
 
@@ -29,6 +30,7 @@ describe "frutas/edit" do
       assert_select "input#fruta_calorias", :name => "fruta[calorias]"
       assert_select "input#fruta_informacao", :name => "fruta[informacao]"
       assert_select "input#fruta_moderador", :name => "fruta[moderador]"
+      assert_select "input#fruta_epoca", :name => "fruta[epoca]"
     end
   end
 end

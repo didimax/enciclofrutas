@@ -1,4 +1,6 @@
 Enciclofrutas::Application.routes.draw do
+  resources :frutas
+
   resources :mercados
 
   resources :epocas
@@ -6,8 +8,6 @@ Enciclofrutas::Application.routes.draw do
   resources :vitaminas
 
   resources :usuarios
-
-  resources :frutas
 
   resources :moderadors
 

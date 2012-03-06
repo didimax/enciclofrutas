@@ -12,7 +12,8 @@ describe "frutas/index" do
         :localizacao => "Localizacao",
         :calorias => "Calorias",
         :informacao => "Informacao",
-        :moderador => nil
+        :moderador => nil,
+        :epoca => nil
       ),
       stub_model(Fruta,
         :nome => "Nome",
@@ -23,7 +24,8 @@ describe "frutas/index" do
         :localizacao => "Localizacao",
         :calorias => "Calorias",
         :informacao => "Informacao",
-        :moderador => nil
+        :moderador => nil,
+        :epoca => nil
       )
     ])
   end
@@ -46,6 +48,8 @@ describe "frutas/index" do
     assert_select "tr>td", :text => "Calorias".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Informacao".to_s, :count => 2
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    assert_select "tr>td", :text => nil.to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => nil.to_s, :count => 2
   end
